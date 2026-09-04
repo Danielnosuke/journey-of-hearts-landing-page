@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journey of Hearts — 相合への旅 | Christian Matching App in Japan</title>
+<meta name="description" content="A faith-centered matching app for Christian singles in Japan. Manually reviewed profiles, required faith statements, and no swiping through faceless bios. Free to use.">
+<link rel="canonical" href="https://journeyofheartsapp.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Journey of Hearts — 相合への旅">
+<meta property="og:description" content="A faith-centered matching app for Christian singles in Japan.">
+<meta property="og:url" content="https://journeyofheartsapp.com/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Journey of Hearts — 相合への旅">
+<meta name="twitter:description" content="A faith-centered matching app for Christian singles in Japan.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Journey of Hearts",
+  "alternateName": "相合への旅",
+  "description": "A faith-centered matching app for Christian singles in Japan.",
+  "applicationCategory": "SocialNetworkingApplication",
+  "operatingSystem": "Web",
+  "url": "https://journeyofheartsapp.com/",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "inLanguage": ["en", "ja"]
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans+JP:wght@400;500&display=swap');
+
+  :root {
+    --red: #C8102E;
+    --indigo: #1B3A6B;
+    --paper: #FFFFFF;
+    --ink: #2B2A28;
+    --line: #E4DED0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans JP', -apple-system, sans-serif;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  header {
+    padding: 96px 0 64px;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--red);
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .jp-title {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: var(--indigo);
+    letter-spacing: 0.2em;
+    margin: 8px 0 28px;
+  }
+
+  .pitch {
+    font-size: 16px;
+    max-width: 420px;
+    margin: 0 auto;
+    color: var(--ink);
+  }
+
+  .pitch .jp {
+    font-size: 14px;
+    color: #6b6a67;
+    margin-top: 8px;
+  }
+
+  .cta {
+    display: inline-block;
+    margin-top: 36px;
+    padding: 14px 36px;
+    background: var(--red);
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--line);
+    margin: 0 auto;
+    width: 48px;
+  }
+
+  main {
+    padding: 56px 0;
+  }
+
+  main p {
+    font-size: 15px;
+    margin: 0 0 24px;
+  }
+
+  main p.jp {
+    color: #6b6a67;
+    font-size: 14px;
+  }
+
+  .trust {
+    list-style: none;
+    margin: 32px 0 0;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .trust li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .trust li + li {
+    border-top: 1px solid var(--line);
+  }
+
+  .trust .en {
+    color: var(--ink);
+  }
+
+  .trust .jp {
+    color: #a3a099;
+    font-size: 13px;
+  }
+
+  section {
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  section h2 {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--indigo);
+    margin: 0 0 4px;
+  }
+
+  section h2 .jp {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #a3a099;
+    margin-left: 10px;
+  }
+
+  section > p.lead {
+    font-size: 13px;
+    color: #a3a099;
+    margin: 0 0 32px;
+  }
+
+  .feature {
+    margin-bottom: 28px;
+  }
+
+  .feature:last-child {
+    margin-bottom: 0;
+  }
+
+  .feature h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--red);
+    margin: 0 0 6px;
+  }
+
+  .feature p {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .feature p.jp {
+    font-size: 13px;
+    color: #6b6a67;
+    margin: 0;
+  }
+
+  .steps {
+    counter-reset: step;
+  }
+
+  .step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .step:last-child {
+    margin-bottom: 0;
+  }
+
+  .step .num {
+    counter-increment: step;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    color: var(--red);
+    flex-shrink: 0;
+    width: 20px;
+  }
+
+  .step .num::before {
+    content: counter(step);
+  }
+
+  .step h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 6px;
+  }
+
+  .step h3 .jp {
+    font-weight: 400;
+    color: #a3a099;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+
+  .step p {
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .step p.jp {
+    font-size: 13px;
+    color: #6b6a67;
+    margin: 0;
+  }
+
+  .faq-item {
+    margin-bottom: 24px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 2px;
+  }
+
+  .faq-item h3 .jp {
+    font-weight: 400;
+    color: #a3a099;
+    font-size: 13px;
+    margin-left: 8px;
+  }
+
+  .faq-item p {
+    font-size: 14px;
+    margin: 6px 0 2px;
+  }
+
+  .faq-item p.jp {
+    font-size: 13px;
+    color: #6b6a67;
+    margin: 0;
+  }
+
+  footer {
+    padding: 40px 0 64px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+  }
+
+  footer .links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  footer a {
+    color: var(--indigo);
+    text-decoration: none;
+  }
+
+  footer .meta {
+    font-size: 12px;
+    color: #a3a099;
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 64px 0 48px; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+    <header>
+      <h1>Journey of Hearts</h1>
+      <div class="jp-title">相合への旅</div>
+
+      <div class="divider"></div>
+
+      <p class="pitch" style="margin-top: 28px;">
+        A faith-centered matching app for Christian singles in Japan.
+        <div class="jp">日本のクリスチャンのためのマッチングアプリ。</div>
+      </p>
+
+      <a class="cta" href="https://journey-of-hearts.vercel.app/">Get Started</a>
+    </header>
+
+    <main>
+      <p>
+        Every profile is manually reviewed before it appears in Browse. Members share their faith story in their own words — at least 100 characters — so you know who you're talking to. No dopey algorithm, unsolicited messages, ghost likes, or endless swiping through faceless profiles and superficial bios.
+      </p>
+      <p class="jp">
+        すべてのプロフィールは表示前に管理者が手動で確認します。メンバーは自分の言葉で信仰について書くことが求められます（100文字以上）。だから、相手のことを本当に知ることができます。気の利かないアルゴリズムや、望まないメッセージ、実体のない「いいね」、顔写真のないプロフィールや中身のない自己紹介文を延々とスワイプし続けるようなことはありません。
+      </p>
+
+      <ul class="trust">
+        <li><span class="en">Faith statement required</span><span class="jp">信仰文が必須</span></li>
+        <li><span class="en">Manual profile approval</span><span class="jp">プロフィールの手動承認</span></li>
+        <li><span class="en">Photo moderation</span><span class="jp">写真の審査</span></li>
+        <li><span class="en">Report &amp; block tools</span><span class="jp">報告・ブロック機能</span></li>
+        <li><span class="en">Free to use</span><span class="jp">無料でご利用いただけます</span></li>
+      </ul>
+    </main>
+
+    <section>
+      <h2>Core Features<span class="jp">主な機能</span></h2>
+
+      <div class="feature">
+        <h3>🏮 Browse ／ 探す</h3>
+        <p>Discover members one at a time. Filter by denomination, location, age, languages, and more.</p>
+        <p class="jp">一人ずつメンバーを探せます。教派・居住地・年齢・言語などで絞り込めます。</p>
+      </div>
+
+      <div class="feature">
+        <h3>縁 Matches ／ マッチ</h3>
+        <p>When two people like each other, a match is formed and celebrated with a special 縁 screen.</p>
+        <p class="jp">お互いにいいねすると縁が成立。特別な縁の画面で祝われます。</p>
+      </div>
+
+      <div class="feature">
+        <h3>📮 Messages ／ メッセージ</h3>
+        <p>Chat privately with your matches in a beautiful sakura-themed message screen.</p>
+        <p class="jp">マッチした相手と桜をテーマにしたメッセージ画面でプライベートにチャット。</p>
+      </div>
+
+      <div class="feature">
+        <h3>💭 Compatibility Questions ／ 相性の質問</h3>
+        <p>Optional questions about faith, personality, family &amp; values. See how your match answered too.</p>
+        <p class="jp">信仰・性格・家族・価値観についての任意の質問。マッチした相手の回答も見られます。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Getting Started<span class="jp">始め方</span></h2>
+      <p class="lead">Your journey in five steps ／ 5つのステップで始まる旅</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Create an account<span class="jp">アカウントを作る</span></h3>
+            <p>Sign up with your email. No social login required. Agree to the Statement of Faith before joining.</p>
+            <p class="jp">メールアドレスで登録。信仰告白に同意してから参加します。</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Complete your profile<span class="jp">プロフィールを完成させる</span></h3>
+            <p>Required: name, age, gender, location, denomination, a faith statement (100+ chars), and at least two photos. The pixel-art journey map tracks your progress.</p>
+            <p class="jp">必須項目：名前・年齢・性別・居住地・教派・信仰文（100文字以上）・写真2枚以上。</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Wait for approval<span class="jp">承認を待つ</span></h3>
+            <p>Your profile and photos are reviewed by a real person before you appear in Browse.</p>
+            <p class="jp">プロフィールと写真は管理者が確認します。</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Browse and like<span class="jp">探していいねする</span></h3>
+            <p>Discover members, read faith stories, and like someone if you feel a connection. If they like you back — it's a match!</p>
+            <p class="jp">メンバーを探し、信仰文を読み、気になる人にいいねを。お互いいいねしたらマッチ成立！</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Start a conversation<span class="jp">メッセージを送る</span></h3>
+            <p>Send a thoughtful first message. Take it at your own pace — this is a journey, not a race.</p>
+            <p class="jp">マッチした相手に心のこもったメッセージを。焦らず、自分のペースで。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>FAQ<span class="jp">よくある質問</span></h2>
+
+      <div class="faq-item">
+        <h3>Is this app only for people in Japan?<span class="jp">このアプリは日本在住の方だけですか？</span></h3>
+        <p>Journey of Hearts is primarily focused on Christian singles living in Japan, though it welcomes anyone connected to Japan's Christian community.</p>
+        <p class="jp">相合への旅は主に日本在住のクリスチャンのためのアプリですが、日本のクリスチャンコミュニティとつながりのある方も歓迎します。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does it cost anything?<span class="jp">料金はかかりますか？</span></h3>
+        <p>Free to use.</p>
+        <p class="jp">無料でご利用いただけます。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What denominations are welcome?<span class="jp">どの教派でも参加できますか？</span></h3>
+        <p>All Christian denominations are welcome — no cults, or similar such groups like JWs, Mormons, SDA, etc.</p>
+        <p class="jp">すべてのキリスト教の教派を歓迎します。カルトやそれに類する団体（エホバの証人、モルモン教、セブンスデー・アドベンチストなど）とは一切関係ありません。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>My photo was rejected — what do I do?<span class="jp">写真が承認されませんでした。どうすればいいですか？</span></h3>
+        <p>Photos must clearly show your face — no sunglasses, no photos from behind, no objects only. Resubmit or contact us via LINE in Settings.</p>
+        <p class="jp">顔がはっきり写っている写真が必要です。再提出するか、設定からLINEでお問い合わせください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I use the app in Japanese?<span class="jp">日本語でも使えますか？</span></h3>
+        <p>Yes — switch between Japanese and English at any time using the 日語 / EN toggle at the top of the screen.</p>
+        <p class="jp">はい。画面上部の「日語 / EN」ボタンでいつでも切り替えられます。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I delete my account?<span class="jp">アカウントを削除するには？</span></h3>
+        <p>Go to Settings → Danger Zone → Delete my account. Your data is permanently removed.</p>
+        <p class="jp">設定 →「危険ゾーン」→「アカウントを削除する」から完全に削除できます。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Who are we?<span class="jp">私たちは何者か？</span></h3>
+        <p>Just an independent Texan missionary in Osaka here to serve the kingdom.</p>
+        <p class="jp">ただ、神の国に仕えるために大阪にいる、テキサス出身の独立系宣教師です。</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="links">
+        <a href="https://www.instagram.com/journeyofheartsapp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/aiaienotabi" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://line.me/ti/p/Zby8mn0W9F" target="_blank" rel="noopener noreferrer">LINE</a>
+      </div>
+      <div class="meta">Journey of Hearts · 相合への旅</div>
+    </footer>
+  </div>
+
+</body>
+</html>
