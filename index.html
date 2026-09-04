@@ -307,14 +307,14 @@
   footer .links {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    font-size: 13px;
+    align-items: center;
+    gap: 20px;
     margin-bottom: 16px;
   }
 
-  footer a {
+  footer .links a {
     color: var(--indigo);
-    text-decoration: none;
+    display: inline-flex;
   }
 
   footer .meta {
@@ -490,9 +490,23 @@
 
     <footer>
       <div class="links">
-        <a href="https://www.instagram.com/journeyofheartsapp/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/aiaienotabi" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://line.me/ti/p/Zby8mn0W9F" target="_blank" rel="noopener noreferrer">LINE</a>
+        <a href="https://www.instagram.com/journeyofheartsapp/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/aiaienotabi" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14 22v-8.5h2.85l.43-3.31H14V7.9c0-.96.27-1.61 1.64-1.61h1.75V3.35C17.08 3.24 16 3.15 14.76 3.15c-2.6 0-4.38 1.59-4.38 4.5v2.54H7.5v3.31h2.88V22h3.62z"/>
+          </svg>
+        </a>
+        <a href="https://line.me/ti/p/Zby8mn0W9F" target="_blank" rel="noopener noreferrer" aria-label="LINE">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M21 11.2c0-4.3-4.3-7.8-9.6-7.8S1.8 6.9 1.8 11.2c0 3.85 3.42 7.08 8.05 7.7.31.07.74.21.85.48.1.24.06.63.03.87l-.14.85c-.04.24-.19.95.83.52.53-.23 1.02-.5 1.5-.79-.29.24 5.14-3.14 6.95-5.55C21.4 14.13 21 12.72 21 11.2z"/>
+          </svg>
+        </a>
       </div>
       <div class="meta">Journey of Hearts · 相合への旅</div>
     </footer>
