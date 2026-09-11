@@ -78,7 +78,13 @@
   .wrap {
     max-width: 880px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: 900px) {
+    .wrap {
+      padding: 0 56px;
+    }
   }
 
   nav {
@@ -135,18 +141,6 @@
     overflow: hidden;
   }
 
-  header::before {
-    content: '';
-    position: absolute;
-    top: -80px;
-    left: -60px;
-    width: 260px;
-    height: 260px;
-    background: radial-gradient(circle, rgba(200,16,46,0.10) 0%, transparent 70%);
-    border-radius: 50%;
-    z-index: 0;
-  }
-
   header::after {
     content: '';
     position: absolute;
@@ -180,11 +174,25 @@
     width: 130px;
     height: 130px;
     margin-bottom: 12px;
+    mix-blend-mode: multiply;
   }
 
   .logo-wrap {
     position: relative;
     display: inline-block;
+  }
+
+  .logo-wrap::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
   }
 
   @keyframes twinkle {
@@ -406,9 +414,8 @@
   }
 
   section {
-    padding: 56px 24px;
+    padding: 56px 0;
     border-top: 1px solid var(--line);
-    margin: 0 -24px;
   }
 
   section.fade-in {
@@ -709,7 +716,7 @@
         </div>
         <div class="hero-screen">
           <div class="screen-frame single">
-            <img src="screenshot_new.png" alt="Journey of Hearts profile and compatibility questions">
+            <img src="app-screenshot.png" alt="Journey of Hearts profile and compatibility questions">
           </div>
         </div>
       </div>
