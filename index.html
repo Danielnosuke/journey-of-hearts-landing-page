@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="W_DJTkqnwca6VXaBTdYNnnLMAAuTHTFQRypBYzrzxqk" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C8102E'/%3E%3Cpath d='M32 12 L32 52 M18 24 L46 24' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="logo.png">
 <title>相合への旅 — Journey of Hearts | 日本のクリスチャン向けマッチングアプリ</title>
 <meta name="description" content="日本のクリスチャンのためのマッチングアプリ。信仰を軸にした、結婚を見据えた出会い。A faith-centered matching app for Christian singles in Japan. Free to use.">
 <link rel="canonical" href="https://journey-of-hearts-landing-page.vercel.app/">
@@ -76,22 +76,150 @@
   }
 
   .wrap {
-    max-width: 640px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav .nav-inner {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav .nav-brand img {
+    width: 32px;
+    height: 32px;
+  }
+
+  nav .nav-brand span {
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+  }
+
+  nav .nav-cta {
+    background: var(--red);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 9px 20px;
+    border-radius: 99px;
+  }
+
   header {
-    padding: 96px 0 64px;
-    text-align: center;
+    padding: 72px 0 64px;
     background: var(--paper);
     position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: -60px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(200,16,46,0.10) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(27,58,107,0.09) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .hero-grid {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 480px;
   }
 
   .logo {
-    width: 110px;
-    height: 110px;
-    margin-bottom: 28px;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 12px;
+  }
+
+  .logo-wrap {
+    position: relative;
+    display: inline-block;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.95; transform: scale(1); }
+    25% { opacity: 0.2; transform: scale(0.7); }
+    50% { opacity: 0.9; transform: scale(1.1); }
+    75% { opacity: 0.15; transform: scale(0.8); }
+  }
+
+  .sparkle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+  }
+
+  .sparkle1 {
+    top: 4px;
+    right: -2px;
+    animation: twinkle 2.2s ease-in-out infinite;
+  }
+
+  .sparkle2 {
+    bottom: 18px;
+    left: -10px;
+    width: 11px;
+    height: 11px;
+    animation: twinkle 2.8s ease-in-out infinite 0.6s;
+  }
+
+  .sparkle3 {
+    top: 40%;
+    right: -16px;
+    width: 9px;
+    height: 9px;
+    animation: twinkle 1.9s ease-in-out infinite 1.1s;
   }
 
   h1 {
@@ -105,11 +233,11 @@
 
   .jp-title {
     font-family: 'Shippori Mincho', serif;
-    font-weight: 500;
-    font-size: 21px;
+    font-weight: 700;
+    font-size: 34px;
     color: var(--indigo);
-    letter-spacing: 0.2em;
-    margin: 8px 0 28px;
+    letter-spacing: 0.1em;
+    margin: 6px 0 28px;
   }
 
   .pitch {
@@ -123,6 +251,31 @@
     font-size: 16px;
     color: var(--ink);
     margin-top: 8px;
+  }
+
+  .hero-screen {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 760px) {
+    .hero-grid {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      gap: 56px;
+    }
+    .hero-text {
+      max-width: none;
+    }
+    .logo, h1, .jp-title {
+      margin-left: 0;
+    }
+    .pitch {
+      margin-left: 0;
+    }
+    .divider {
+      margin-left: 0;
+    }
   }
 
   .cta {
@@ -147,6 +300,42 @@
 
   main {
     padding: 56px 0;
+  }
+
+  .screens {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 0 48px;
+    flex-wrap: wrap;
+  }
+
+  .screen-frame {
+    width: 180px;
+    border: 6px solid var(--ink);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    background: white;
+  }
+
+  .screen-frame.single {
+    width: 240px;
+  }
+
+  .screen-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    .screen-frame {
+      width: 42%;
+    }
+    .screen-frame.single {
+      width: 62%;
+    }
   }
 
   main p {
@@ -183,9 +372,14 @@
   }
 
   .trust-icon {
-    font-size: 18px;
     flex-shrink: 0;
-    line-height: 1.3;
+    color: var(--red);
+  }
+
+  .trust-icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
   }
 
   .trust-item .en {
@@ -212,8 +406,28 @@
   }
 
   section {
-    padding: 56px 0;
+    padding: 56px 24px;
     border-top: 1px solid var(--line);
+    margin: 0 -24px;
+  }
+
+  section.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  section.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  section.tint-red {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FDEEF1 50%, #FFFFFF 100%);
+  }
+
+  section.tint-indigo {
+    background: linear-gradient(180deg, #FFFFFF 0%, #EEF2F8 50%, #FFFFFF 100%);
   }
 
   section h2 {
@@ -250,19 +464,45 @@
     line-height: 1.8;
   }
 
-  .feature {
-    margin-bottom: 28px;
+  .verse {
+    margin: 0 0 24px;
+    padding: 0 0 0 18px;
+    border-left: 3px solid var(--indigo);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--indigo);
+    line-height: 1.7;
   }
 
-  .feature:last-child {
-    margin-bottom: 0;
+  .feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 16px rgba(43,42,40,0.04);
   }
 
   .feature h3 {
     font-size: 15px;
     font-weight: 500;
     color: var(--red);
-    margin: 0 0 6px;
+    margin: 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .feat-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
 
   .feature p {
@@ -276,14 +516,29 @@
     margin: 0;
   }
 
+  @media (min-width: 640px) {
+    .feature-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   .steps {
     counter-reset: step;
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid var(--line);
   }
 
   .step {
     display: flex;
     gap: 16px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 4px 16px rgba(43,42,40,0.04);
   }
 
   .step:last-child {
@@ -293,10 +548,18 @@
   .step .num {
     counter-increment: step;
     font-family: 'Shippori Mincho', serif;
+    font-weight: 700;
     font-size: 15px;
     color: var(--red);
+    background: #FAF8F4;
+    border: 1.5px solid var(--red);
+    border-radius: 50%;
     flex-shrink: 0;
-    width: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .step .num::before {
@@ -412,20 +675,44 @@
 </head>
 <body>
 
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">
+        <img src="logo.png" alt="">
+        <span>Journey of Hearts</span>
+      </div>
+      <a class="nav-cta" href="https://journey-of-hearts.vercel.app/">Get Started</a>
+    </div>
+  </nav>
+
   <div class="wrap">
     <header>
-      <img src="logo.png" alt="Journey of Hearts" class="logo">
-      <h1>Journey of Hearts</h1>
-      <div class="jp-title">相合への旅</div>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="logo-wrap">
+            <img src="logo.png" alt="Journey of Hearts" class="logo">
+            <svg class="sparkle sparkle1" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M7 0 C7 0 7.5 5 9 7 C10.5 5 11 0 11 0 C11 0 10.5 9 9 11 C7.5 9 7 0 7 0 Z" fill="#C8102E"/><path d="M0 7 C0 7 5 7.5 7 9 C5 10.5 0 11 0 11 C0 11 9 10.5 11 9 C9 7.5 0 7 0 7 Z" fill="#C8102E"/></svg>
+            <svg class="sparkle sparkle2" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M7 0 C7 0 7.5 5 9 7 C10.5 5 11 0 11 0 C11 0 10.5 9 9 11 C7.5 9 7 0 7 0 Z" fill="#1B3A6B"/><path d="M0 7 C0 7 5 7.5 7 9 C5 10.5 0 11 0 11 C0 11 9 10.5 11 9 C9 7.5 0 7 0 7 Z" fill="#1B3A6B"/></svg>
+            <svg class="sparkle sparkle3" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M7 0 C7 0 7.5 5 9 7 C10.5 5 11 0 11 0 C11 0 10.5 9 9 11 C7.5 9 7 0 7 0 Z" fill="#C8102E"/><path d="M0 7 C0 7 5 7.5 7 9 C5 10.5 0 11 0 11 C0 11 9 10.5 11 9 C9 7.5 0 7 0 7 Z" fill="#C8102E"/></svg>
+          </div>
+          <h1>Journey of Hearts</h1>
+          <div class="jp-title">相合への旅</div>
 
-      <div class="divider"></div>
+          <div class="divider"></div>
 
-      <p class="pitch" style="margin-top: 28px;">
-        A faith-centered matching app for Christian singles in Japan.
-        <div class="jp">日本のクリスチャンのためのマッチングアプリ。</div>
-      </p>
+          <p class="pitch" style="margin-top: 28px;">
+            A faith-centered matching app for Christian singles in Japan.
+            <div class="jp">日本のクリスチャンのためのマッチングアプリ。</div>
+          </p>
 
-      <a class="cta" href="https://journey-of-hearts.vercel.app/">Get Started</a>
+          <a class="cta" href="https://journey-of-hearts.vercel.app/">Get Started</a>
+        </div>
+        <div class="hero-screen">
+          <div class="screen-frame single">
+            <img src="screenshot_new.png" alt="Journey of Hearts profile and compatibility questions">
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -438,57 +725,59 @@
 
       <div class="trust">
         <div class="trust-item">
-          <span class="trust-icon">✝</span>
+          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M6 8h12"/></svg></span>
           <div><span class="en">Faith statement required</span><span class="jp">信仰文が必須</span></div>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">✔</span>
+          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></span>
           <div><span class="en">Manual profile approval</span><span class="jp">プロフィールの手動承認</span></div>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">📷</span>
+          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13.5" r="3.3"/></svg></span>
           <div><span class="en">Photo moderation</span><span class="jp">写真の審査</span></div>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">⚑</span>
+          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18"/><path d="M5 4h11l-2 4 2 4H5"/></svg></span>
           <div><span class="en">Report &amp; block tools</span><span class="jp">報告・ブロック機能</span></div>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">🆓</span>
+          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4"/><path d="M12 8v13M3 12v9h18v-9"/><path d="M12 8c-1.4 0-2.8-.9-2.8-2.3S10.6 3.5 12 4.4c1.4-.9 2.8.1 2.8 1.3S13.4 8 12 8z"/></svg></span>
           <div><span class="en">Free to use</span><span class="jp">無料でご利用いただけます</span></div>
         </div>
       </div>
     </main>
 
-    <section>
+    <section class="tint-red fade-in">
       <h2>Core Features<span class="jp">主な機能</span></h2>
 
+      <div class="feature-grid">
       <div class="feature">
-        <h3>🏮 Browse ／ 探す</h3>
+        <h3><svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg> Browse ／ 探す</h3>
         <p>Discover members one at a time. Filter by denomination, location, age, languages, and more.</p>
         <p class="jp">一人ずつメンバーを探せます。教派・居住地・年齢・言語などで絞り込めます。</p>
       </div>
 
       <div class="feature">
-        <h3>縁 Matches ／ マッチ</h3>
+        <h3><svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-9C.7 8.3 2 4.5 5.6 4c2-.3 3.7.8 4.4 2.3C10.7 4.8 12.4 3.7 14.4 4c3.6.5 4.9 4.3 3.1 8-2.5 4.65-9.5 9-9.5 9z"/></svg> Matches ／ マッチ（縁）</h3>
         <p>When two people like each other, a match is formed and celebrated with a special 縁 screen.</p>
         <p class="jp">お互いにいいねすると縁が成立。特別な縁の画面で祝われます。</p>
       </div>
 
       <div class="feature">
-        <h3>📮 Messages ／ メッセージ</h3>
+        <h3><svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.4-4 8-9 8-1.3 0-2.5-.2-3.6-.6L3 21l1.7-4.1C3.6 15.5 3 13.8 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg> Messages ／ メッセージ</h3>
         <p>Chat privately with your matches in a beautiful sakura-themed message screen.</p>
         <p class="jp">マッチした相手と桜をテーマにしたメッセージ画面でプライベートにチャット。</p>
       </div>
 
       <div class="feature">
-        <h3>💭 Compatibility Questions ／ 相性の質問</h3>
+        <h3><svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 4.4-4 8-9 8-1.3 0-2.5-.2-3.6-.6L3 21l1.7-4.1C3.6 15.5 3 13.8 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/><path d="M10 9.3c0-1 .8-1.7 2-1.7s2 .7 2 1.5c0 1.3-2 1.3-2 2.8"/><circle cx="12" cy="15" r="0.2" fill="currentColor"/></svg> Compatibility Questions ／ 相性の質問</h3>
         <p>Optional questions about faith, personality, family &amp; values. See how your match answered too.</p>
         <p class="jp">信仰・性格・家族・価値観についての任意の質問。マッチした相手の回答も見られます。</p>
       </div>
+      </div>
     </section>
 
-    <section>
+    <section class="tint-indigo fade-in">
       <h2>Getting Started<span class="jp">始め方</span></h2>
       <p class="lead">Your journey in five steps ／ 5つのステップで始まる旅</p>
 
@@ -540,20 +829,23 @@
       </div>
     </section>
 
-    <section>
-      <h2>Our Story<span class="jp">私たちについて</span></h2>
-      <p>Just an independent Texan missionary in Osaka here to serve the kingdom.</p>
-      <p class="jp">ただ、神の国に仕えるために大阪にいる、テキサス出身の独立系宣教師です。</p>
+    <section class="fade-in">
+      <h2>About Me<span class="jp">自己紹介</span></h2>
+      <blockquote class="verse">
+        "How can two walk together unless they are agreed?" — Amos 3:3
+      </blockquote>
+      <p>I'm Daniel, an independent missionary from Texas, serving the local church in Japan. I don't know anything about tech or business or networking, etc. But it's easy for me to see that the Christian singles community is sadly neglected, with few options available for meeting others. If there's one thing everyone agrees on, it's that mainstream dating apps are the worst — the swiping, the algorithms, leading even more to rejection fatigue. So why not get rid of all the terrible parts and make something actually useful, a blessing for believers?</p>
+      <p class="jp">私はダニエル、テキサス出身の独立系宣教師で、日本の地域教会に仕えています。テクノロジーやビジネス、人脈作りについては正直よくわかりません。ですが、クリスチャンの独身者コミュニティが取り残されていて、出会いの場がほとんどないことは、誰の目にも明らかです。世間一般のマッチングアプリが最悪だという点では、みんなの意見が一致しています。スワイプやアルゴリズムのせいで、拒絶感がさらに募るばかりです。それなら、その嫌な部分を全部取り除いて、信者にとって本当に役立つ、祝福となるものを作ってみようと思ったのです。</p>
     </section>
 
-    <section>
+    <section class="tint-red fade-in">
       <h2>What people are saying<span class="jp">利用者の声</span></h2>
       <blockquote class="testimonial">
         "Thanks for sharing, I quickly made an account and it looks like an interesting take on dating apps - getting straight to the point of what Christians want to understand within the profile is helpful."
       </blockquote>
     </section>
 
-    <section>
+    <section class="tint-indigo fade-in">
       <h2>FAQ<span class="jp">よくある質問</span></h2>
 
       <details class="faq-item" open>
@@ -570,8 +862,8 @@
 
       <details class="faq-item">
         <summary>What denominations are welcome?<span class="jp">どの教派でも参加できますか？</span></summary>
-        <p>All Christian denominations are welcome — no cults, or similar such groups like JWs, Mormons, SDA, etc.</p>
-        <p class="jp">すべてのキリスト教の教派を歓迎します。カルトやそれに類する団体（エホバの証人、モルモン教、セブンスデー・アドベンチストなど）とは一切関係ありません。</p>
+        <p>All Christian denominations welcome (not you, cults) — gospel-loving churches that confess the fundamentals of the faith, that is, historic Christianity. No Kool-Aid rule for groups like JWs, Mormons, SDA, Unification Church, Oneness Pentecostal, Unitarians, etc.</p>
+        <p class="jp">すべてのキリスト教の教派を歓迎します（カルトは対象外）。福音を大切にし、信仰の根本——すなわち歴史的キリスト教——を告白する教会が対象です。エホバの証人、モルモン教、セブンスデー・アドベンチスト、統一教会、ワンネス・ペンテコステ派、ユニテリアン主義などの団体は対象外です。</p>
       </details>
 
       <details class="faq-item">
@@ -616,6 +908,17 @@
       <div class="meta">Journey of Hearts · 相合への旅</div>
     </footer>
   </div>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('section.fade-in').forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
