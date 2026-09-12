@@ -78,13 +78,7 @@
   .wrap {
     max-width: 880px;
     margin: 0 auto;
-    padding: 0 56px;
-  }
-
-  @media (min-width: 900px) {
-    .wrap {
-      padding: 0 80px;
-    }
+    padding: 0;
   }
 
   nav {
@@ -121,6 +115,7 @@
   nav .nav-brand img {
     width: 32px;
     height: 32px;
+    mix-blend-mode: multiply;
   }
 
   nav .nav-brand span {
@@ -141,7 +136,7 @@
   }
 
   header {
-    padding: 72px 0 64px;
+    padding: 72px 56px 64px;
     background: var(--paper);
     position: relative;
     overflow: hidden;
@@ -278,7 +273,7 @@
   }
 
   main {
-    padding: 56px 0;
+    padding: 56px 56px;
   }
 
   .screens {
@@ -385,7 +380,7 @@
   }
 
   section {
-    padding: 56px 0;
+    padding: 56px 56px;
     border-top: 1px solid var(--line);
   }
 
@@ -622,7 +617,7 @@
   }
 
   footer {
-    padding: 40px 0 64px;
+    padding: 40px 56px 64px;
     text-align: center;
     border-top: 1px solid var(--line);
   }
@@ -649,6 +644,13 @@
     header { padding: 64px 0 48px; }
     h1 { font-size: 28px; }
   }
+  @media (min-width: 900px) {
+    header, main, section, footer {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+
 </style>
 </head>
 <body>
