@@ -160,7 +160,7 @@
 
   .hero-grid {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
     text-align: center;
@@ -650,21 +650,55 @@ max-width: 600px;
     }
   }
 
- .photo-break {
-  text-align: center;
-  padding: 40px 20px;
-  border-top: none;
-}
+   .photo-break {
+    text-align: center;
+    padding-top: 55px;
+    padding-bottom: 32px;
+    border-top: none;
+  }
 
-.photo-break img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
+  .photo-break img {
+    display: block;
+    margin: 0 auto;
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+
+  .about-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    align-items: start;
+    margin-top: 24px;
+  }
+
+  .about-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .about-text p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .about-layout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .about-photo {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+  }
 
 </style>
 </head>
@@ -823,15 +857,19 @@ max-width: 600px;
 
     <section class="fade-in">
       <h2>About Me<span class="jp">自己紹介</span></h2>
-      <blockquote class="verse">
-        "How can two walk together unless they are agreed?" — Amos 3:3
-      </blockquote>
-      <p>I'm Daniel, an independent missionary from Texas, serving the local church in Japan. I don't know anything about tech or business or networking, etc. But it's easy for me to see that the Christian singles community is sadly neglected, with few options available for meeting others. If there's one thing everyone agrees on, it's that mainstream dating apps are the worst — the swiping, the algorithms, leading even more to rejection fatigue. So why not get rid of all the terrible parts and make something actually useful, a blessing for believers?</p>
-      <p class="jp">私はダニエル、テキサス出身の独立系宣教師で、日本の地域教会に仕えています。テクノロジーやビジネス、人脈作りについては正直よくわかりません。ですが、クリスチャンの独身者コミュニティが取り残されていて、出会いの場がほとんどないことは、誰の目にも明らかです。世間一般のマッチングアプリが最悪だという点では、みんなの意見が一致しています。スワイプやアルゴリズムのせいで、拒絶感がさらに募るばかりです。それなら、その嫌な部分を全部取り除いて、信者にとって本当に役立つ、祝福となるものを作ってみようと思ったのです。</p>
-    </section>
+      <div class="about-layout">
+        <img src="selfie2.jpg" alt="Daniel, founder of Journey of Hearts" class="about-photo">
 
-    <section class="fade-in photo-break">
-      <img src="fireworks.jpg" alt="A crowd watching fireworks together at night">
+        <div class="about-text">
+          <blockquote class="verse">
+            "How can two walk together unless they are agreed?" — Amos 3:3
+          </blockquote>
+
+          <p>I'm Daniel, an independent missionary from Texas, serving the local church in Japan. I don't know anything about tech or business or networking, etc. But it's easy for me to see that the Christian singles community is sadly neglected, with few options available for meeting others. If there's one thing everyone agrees on, it's that mainstream dating apps are the worst — the swiping, the algorithms, leading even more to rejection fatigue. So why not get rid of all the terrible parts and make something actually useful, a blessing for believers?</p>
+
+          <p class="jp">私はダニエル、テキサス出身の独立系宣教師で、日本の地域教会に仕えています。テクノロジーやビジネス、人脈作りについては正直よくわかりません。ですが、クリスチャンの独身者コミュニティが取り残されていて、出会いの場がほとんどないことは、誰の目にも明らかです。世間一般のマッチングアプリが最悪だという点では、みんなの意見が一致しています。スワイプやアルゴリズムのせいで、拒絶感がさらに募るばかりです。それなら、その嫌な部分を全部取り除いて、信者にとって本当に役立つ、祝福となるものを作ってみようと思ったのです。</p>
+        </div>
+      </div>
     </section>
 
     <section class="tint-red fade-in">
@@ -839,6 +877,10 @@ max-width: 600px;
       <blockquote class="testimonial">
         "Thanks for sharing, I quickly made an account and it looks like an interesting take on dating apps - getting straight to the point of what Christians want to understand within the profile is helpful."
       </blockquote>
+    </section>
+
+    <section class="fade-in photo-break">
+      <img src="fireworks.jpg" alt="A crowd watching fireworks together at night">
     </section>
 
     <section class="tint-indigo fade-in">
