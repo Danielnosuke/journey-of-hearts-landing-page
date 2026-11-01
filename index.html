@@ -283,7 +283,8 @@
   }
 
   .screen-frame {
-    width: 180px;
+    width: 100%;
+max-width: 600px;
     border: 6px solid var(--ink);
     border-radius: 20px;
     overflow: hidden;
@@ -649,21 +650,21 @@
     }
   }
 
-  .photo-break {
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 8px;
-    border-top: none;
-  }
+ .photo-break {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: none;
+}
 
-  .photo-break img {
-    display: block;
-    margin: 0 auto;
-    width: 180px;
-    height: auto;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  }
+.photo-break img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
 
 </style>
 </head>
@@ -829,6 +830,10 @@
       <p class="jp">私はダニエル、テキサス出身の独立系宣教師で、日本の地域教会に仕えています。テクノロジーやビジネス、人脈作りについては正直よくわかりません。ですが、クリスチャンの独身者コミュニティが取り残されていて、出会いの場がほとんどないことは、誰の目にも明らかです。世間一般のマッチングアプリが最悪だという点では、みんなの意見が一致しています。スワイプやアルゴリズムのせいで、拒絶感がさらに募るばかりです。それなら、その嫌な部分を全部取り除いて、信者にとって本当に役立つ、祝福となるものを作ってみようと思ったのです。</p>
     </section>
 
+    <section class="fade-in photo-break">
+      <img src="fireworks.jpg" alt="A crowd watching fireworks together at night">
+    </section>
+
     <section class="tint-red fade-in">
       <h2>What people are saying<span class="jp">利用者の声</span></h2>
       <blockquote class="testimonial">
@@ -874,10 +879,6 @@
         <p>Go to Settings → Danger Zone → Delete my account. Your data is permanently removed.</p>
         <p class="jp">設定 →「危険ゾーン」→「アカウントを削除する」から完全に削除できます。</p>
       </details>
-    </section>
-
-    <section class="fade-in photo-break">
-      <img src="fireworks.jpg" alt="A crowd watching fireworks together at night" width="180">
     </section>
 
     <footer>
