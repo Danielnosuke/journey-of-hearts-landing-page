@@ -218,8 +218,15 @@
   }
 
   .hero-screen { display: flex; gap: 14px; align-items: flex-start; justify-content: center; }
-  .hero-screen .screen-frame.single { width: 190px; }
-  @media (max-width: 480px) { .hero-screen .screen-frame.single { width: 150px; } }
+  .hero-screen .screen-frame.single { width: 240px; position: relative; }
+  @media (max-width: 480px) { .hero-screen .screen-frame.single { width: 200px; } }
+
+  .hero-screen .screen-frame.single img.fade-b { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  @keyframes fadeA { 0%, 40% { opacity: 1; } 50%, 90% { opacity: 0; } 100% { opacity: 1; } }
+  @keyframes fadeB { 0%, 40% { opacity: 0; } 50%, 90% { opacity: 1; } 100% { opacity: 0; } }
+  .fade-a { animation: fadeA 10s ease-in-out infinite; }
+  .fade-b { animation: fadeB 10s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .fade-a, .fade-b { animation: none; } .fade-b { display: none; } }
 
   @keyframes mistSwirl {
     0%   { background-position: 10% 20%, 90% 80%; }
@@ -758,7 +765,7 @@ max-width: 600px;
         </div>
         <div class="hero-screen">
           <div class="screen-frame single">
-            <img src="hero-match.png" alt="Journey of Hearts match screen"></div><div class="screen-frame single"><img src="app-screenshot.png" alt="Journey of Hearts profile and compatibility questions">
+            <img class="fade-a" src="hero-match.png" alt="Journey of Hearts match screen"><img class="fade-b" src="app-screenshot.png" alt="Journey of Hearts profile and compatibility questions">
           </div>
         </div>
       </div>
